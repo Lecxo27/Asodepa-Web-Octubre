@@ -1,0 +1,141 @@
+<form [formGroup]="animalForm" (ngSubmit)="ActualizarAnimal()">
+    <label for="AnimalNombre">Nombre del Animal</label>
+    <div class="input-group mb-3 mt-3"><!-- Nombre -->
+      <input type="text" class="form-control" id="AnimalNombre" placeholder="" formControlName="nombreANI" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+
+    <label for="AnimalEspecie">Especie</label>
+    <div class="input-group mb-3"><!-- Especie -->
+      <input type="text" class="form-control" id="AnimalEspecie" placeholder="Especie" formControlName="especieANI" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+
+    <label for="AnimalRaza">Raza</label>
+    <div class="input-group mb-3"><!-- Raza -->
+      <input type="text" class="form-control" id="AnimalRaza" placeholder="Raza" formControlName="razaANI" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    
+    <label for="AnimalEdad">Edad</label>
+    <div class="input-group mb-3"><!-- Edad -->
+      <input type="text" class="form-control" id="AnimalEdad" placeholder="Edad aproximada" formControlName="edadANI" aria-label="Recipient's username" aria-describedby="basic-addon2">
+    </div>
+
+    <label for="AnimalGenero">Genero</label><!-- Genero -->
+    <select class="form-select" id="AnimalGenero" aria-label="Default select example" formControlName="generoANI">
+      <option value="Macho" selected>Macho</option>
+      <option value="Hembra">Hembra</option>
+
+    </select>
+    <br>
+
+    <label for="AnimalEsterelizado">Esterelizado</label>
+    <select class="form-select" id="AnimalEsterelizado" aria-label="Default select example" formControlName="esterilizadoANI">
+      <option value="Esterelizado" selected>Esterelizado</option>
+      <option value="No esta esterelizado">No esta esterelizado</option>
+
+    </select>
+    <br>
+
+    <label for="AnimalProxEste">Proxima Esterilizacion</label>
+    <div class="input-group">
+      <button class="btn btn-outline-secondary" (click)="d2.toggle()" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+      </svg></button>
+      <input
+        id="AnimalProxEste"
+        formControlName="proxEstANI"
+        class="form-control"
+        placeholder="dd/mm/yyyy"
+        name="d2"
+        ngbDatepicker
+        #d2="ngbDatepicker"
+        
+      />			
+    </div>
+
+    <label for="AnimalDescrip">Descripcion Detallada</label>
+    <div class="input-group mb-3"><!-- Descripcion --><!-- Revisar si necesario -->
+      <textarea class="form-control" id="AnimalDescrip" aria-label="With textarea" formControlName="animalDescANI"></textarea>
+    </div>
+    <hr>
+
+    <label for="AnimalDespara">Desparacitacion</label>
+    <div class="input-group">
+      <button class="btn btn-outline-secondary" (click)="d3.toggle()" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+      </svg></button>
+      <input
+        id="AnimalDespara"
+        class="form-control"
+        placeholder="dd/mm/yyyy"
+        formControlName="desparacitacionANI"
+        name="d3"
+        ngbDatepicker
+        #d3="ngbDatepicker"
+      />			
+    </div>
+
+    <label for="AnimalProxDesp">Proxima Desparacitacion</label>
+    <div class="input-group">
+      <button class="btn btn-outline-secondary" (click)="d4.toggle()" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+      </svg></button>
+      <input
+        id="AnimalProxDesp"
+        class="form-control"
+        placeholder="dd/mm/yyyy"
+        formControlName="proxDespANI"
+        name="d4"
+        ngbDatepicker
+        #d4="ngbDatepicker"
+      />			
+    </div>
+
+
+
+    <label for="generochek">Vacunas:   </label>
+    <div class="form-check form-check-inline"><!-- Vacunas -->
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Sextuple"formControlName="vacunaANI">
+      <label class="form-check-label" for="inlineCheckbox1">Sextuple</label>
+    </div>
+    <div class="form-check form-check-inline"><!-- Vacunas -->
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Triple felina" formControlName="vacunaANI">
+      <label class="form-check-label" for="inlineCheckbox2">Triple Felina</label>
+    </div>
+    <div class="form-check form-check-inline"><!-- Vacunas -->
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="Antirrabica" formControlName="vacunaANI">
+      <label class="form-check-label" for="inlineCheckbox3">Antirrabica</label>
+    </div>
+    <br><br>
+    <label for="generochek">Hospedaje:   </label>
+    <select class="form-select" aria-label="Default select example" formControlName="hospedajeANI">
+      <option value="Refugio" selected>Refugio</option>
+      <option value="Hogar Kanguro">Hogar Kanguro</option>
+      <option value="Adoptado">Adoptado</option>
+    </select>
+    <br>
+    
+    <label for="AnimalProxVac">Proxima vacunacion</label>
+    <div class="input-group">
+      <button class="btn btn-outline-secondary" (click)="d5.toggle()" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+      </svg></button>
+      <input
+        id="AnimalProxVac"
+        class="form-control"
+        placeholder="dd/mm/yyyy"
+        formControlName="proxVacANI"
+        name="d5"
+        ngbDatepicker
+        #d5="ngbDatepicker"
+      />			
+    </div>
+
+    
+    <label for="AnimalObservaciones">Observaciones</label>
+    <div class="input-group mb-3"><!-- Observaciones --><!-- Revisar si necesario -->
+      <textarea class="form-control" id="AnimalObservaciones" aria-label="With textarea" formControlName="observacionesANI"></textarea>
+    </div>
+
+    <button class="btn btn-success" type="submit"> GUARDAR</button>
+</form>
+<!-- //////////////////////////////////////////////////////////////////////////////// -->

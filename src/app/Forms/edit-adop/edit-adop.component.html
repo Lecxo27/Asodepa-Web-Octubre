@@ -1,0 +1,45 @@
+<form [formGroup]="adopForm" (ngSubmit)="onFormSubmit()">
+    <div class="mb-3 mt-3"><!-- //Nombre y apellido -->
+        <label for="AdoptanteNombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="AdoptanteNombre" placeholder="" formControlName="nombreADOP" aria-label="Username" aria-describedby="basic-addon1">
+      </div>          
+      <div class=" mb-3">
+        <label for="AdoptanteApellido" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="AdoptanteApellido" placeholder="" formControlName="apellidoADOP" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+      <label for="AdoptanteCedula">Cedula</label>
+      <div class=" input-group mb-3"><!-- Cedula -->
+        
+        <span class="input-group-text" id="basic-addon2">V-</span>
+        <input type="text" class="form-control" id="AdoptanteCedula" placeholder="" formControlName="cedulaADOP" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      </div>
+
+      <label for="AdoptanteDireccion">Direccion</label>
+      <div class="input-group mb-3"><!-- Direccion -->
+        <input type="text" class="form-control" id="AdoptanteDireccion" placeholder="" formControlName="direccionADOP" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      </div>
+      
+      <label for="AdoptanteReferencia">Referencia de direccion</label>
+      <div class="input-group mb-3"><!-- Referencia de direccion -->
+        <input type="text" class="form-control" id="AdoptanteReferencia" placeholder="" formControlName="referenciaADOP" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      </div>
+      
+      <label for="AdoptanteTelefono">Telefono</label>
+      <div class="input-group mb-3"><!-- Telefono -->
+        <input type="text" class="form-control" id="AdoptanteTelefono" placeholder="" formControlName="TelefonoADOP" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      </div>
+
+      <label for="AdoptanteCelular">Celular</label>
+      <div class="input-group mb-3"><!-- Celular -->
+        <input type="text" class="form-control" id="AdoptanteCelular" placeholder="" formControlName="celularADOP" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      </div>
+      
+      <label for="AdoptanteAdoptados">Animales Adoptados</label>
+      <div class="input-group mb-3"><!-- Animales Adoptados -->
+        <input type="text" class="form-control" id="AdoptanteAdoptados" placeholder="" formControlName="AnimalesADOP" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      </div>
+        <button class="btn btn-success" type="submit"> HOLA MUNDO</button>
+
+        <h1> {{input}} </h1>
+  </form>

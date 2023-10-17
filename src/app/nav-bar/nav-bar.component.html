@@ -1,0 +1,32 @@
+<nav *ngIf="showNavbar"class="navbar navbar-expand-md border-bottom border-bottom-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/inicio" style="color: greenyellow;"> <img src="/assets/img/LOGO120.png" alt="LOGO"> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="login" routerLinkActive="active">login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/Adoptante" routerLinkActive="active">Adoptantes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/Animales" routerLinkActive="active">Animales</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="HistMed" routerLinkActive="active">Hist.Medico</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="kanguro" routerLinkActive="active">Kanguros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="registro" routerLinkActive="active">Registrarse</a>
+          </li>
+  
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

@@ -1,0 +1,254 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "nombreADOP": "Hoal",
+      "apellidoADOP": "Bohorquez",
+      "cedulaADOP": "27849199",
+      "direccionADOP": "Kolle",
+      "referenciaADOP": "cerca de Kalle",
+      "TelefonoADOP": "04146346651",
+      "celularADOP": "60253365614",
+      "AnimalesADOP": "2",
+      "id": 2
+    },
+    {
+      "nombreADOP": "Hoal",
+      "apellidoADOP": "Bohorquez",
+      "cedulaADOP": "27849199",
+      "direccionADOP": "Kolle",
+      "referenciaADOP": "cerca de Kalle",
+      "TelefonoADOP": "04146346651",
+      "celularADOP": "60253365614",
+      "AnimalesADOP": "2",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "adoptante": [
+    {
+      "nombreADOP": "Luis",
+      "apellidoADOP": "Bohorquez",
+      "cedulaADOP": "27849199",
+      "direccionADOP": "Calle 69 con Av 15",
+      "referenciaADOP": "Diagonal a la clinica IZOT",
+      "TelefonoADOP": "0414-6346651",
+      "celularADOP": "0414-5968874",
+      "AnimalesADOP": "Koda Jose",
+      "id": 1
+    },
+    {
+      "nombreADOP": "Pedro",
+      "apellidoADOP": "Garcia",
+      "cedulaADOP": "8951654",
+      "direccionADOP": "Calle 80 Avenida 20",
+      "referenciaADOP": "No c",
+      "TelefonoADOP": "04146346651",
+      "celularADOP": "456987456",
+      "AnimalesADOP": "452",
+      "id": 2
+    },
+    {
+      "nombreADOP": "Antonio",
+      "apellidoADOP": "Gonzales",
+      "cedulaADOP": "7456985",
+      "direccionADOP": "Mac donalds",
+      "referenciaADOP": "Burger King",
+      "TelefonoADOP": "04124569536",
+      "celularADOP": "04146859974",
+      "AnimalesADOP": "789",
+      "id": 3
+    },
+    {
+      "nombreADOP": "Maria",
+      "apellidoADOP": "Chavez",
+      "cedulaADOP": "26157846",
+      "direccionADOP": "Al lado del hospital",
+      "referenciaADOP": "a tres cuadras de la estacion de gasolina",
+      "TelefonoADOP": "04146589965",
+      "celularADOP": "04146578842",
+      "AnimalesADOP": "452,415,145",
+      "id": 4
+    },
+    {
+      "nombreADOP": "Pekora",
+      "apellidoADOP": "Usada",
+      "cedulaADOP": "7777777",
+      "direccionADOP": "PekoLand",
+      "referenciaADOP": "Cerca de la taqueria",
+      "TelefonoADOP": "04146346651",
+      "celularADOP": "041412578652",
+      "AnimalesADOP": "45.21.155",
+      "id": 5
+    },
+    {
+      "nombreADOP": "Pedro",
+      "apellidoADOP": "Cantellano",
+      "cedulaADOP": "27569884",
+      "direccionADOP": "Calle 34 Avenida 10",
+      "referenciaADOP": "Cerca del parque de la esquina",
+      "TelefonoADOP": "04146346651",
+      "celularADOP": "04146346651",
+      "AnimalesADOP": "452 456 256",
+      "id": 6
+    },
+    {
+      "nombreADOP": "Carlos",
+      "apellidoADOP": "Menterra",
+      "cedulaADOP": "25698636",
+      "direccionADOP": "Calle 40 Avenida 20",
+      "referenciaADOP": "Cerca del parque de la esquina de Pedro",
+      "TelefonoADOP": "04145874459",
+      "celularADOP": "04145874485",
+      "AnimalesADOP": "458 965 321",
+      "id": 7
+    },
+    {
+      "nombreADOP": "Pekora",
+      "apellidoADOP": "Anastacia",
+      "cedulaADOP": "4859624",
+      "direccionADOP": "Calle 34 Avenida 15",
+      "referenciaADOP": "Es un poco lejos del sambil",
+      "TelefonoADOP": "04125896654",
+      "celularADOP": "04145879965",
+      "AnimalesADOP": "478 569 158",
+      "id": 8
+    },
+    {
+      "nombreADOP": "Lecxo",
+      "apellidoADOP": "Bohorquez",
+      "cedulaADOP": "7849199",
+      "direccionADOP": "Calle 69 Avenida 15",
+      "referenciaADOP": "Cerca del Peruano",
+      "TelefonoADOP": "04142569985",
+      "celularADOP": "041458745632",
+      "AnimalesADOP": "78 45 985",
+      "id": 9
+    },
+    {
+      "nombreADOP": "A-aron",
+      "apellidoADOP": "Jak-eline",
+      "cedulaADOP": "27852694",
+      "direccionADOP": "Calle 27 Avenida 45",
+      "referenciaADOP": "Cerca de la circunvalacion 2",
+      "TelefonoADOP": "041465425563",
+      "celularADOP": "041456988565",
+      "AnimalesADOP": "45 12 78",
+      "id": 10
+    }
+  ],
+  "animales": [
+    {
+      "nombreANI": "Koda",
+      "especieANI": "Perro",
+      "razaANI": "Yorkie",
+      "edadANI": "13 Años",
+      "generoANI": "Macho",
+      "esterilizadoANI": "Esterelizado",
+      "proxEstANI": "2023/9",
+      "animalDescANI": "Es plateado",
+      "desparacitacionANI": "2023/9",
+      "proxDespANI": {
+        "year": 2023,
+        "month": 9,
+        "day": 27
+      },
+      "vacunaANI": "",
+      "hospedajeANI": "Adoptado",
+      "proxVacANI": "2023/9",
+      "observacionesANI": "El mejor perro ",
+      "id": 1
+    },
+    {
+      "nombreANI": "Castañas",
+      "especieANI": "Gato",
+      "razaANI": "Mixto",
+      "edadANI": "4 Años",
+      "generoANI": "Hembra",
+      "esterilizadoANI": "Esterelizado",
+      "proxEstANI": {
+        "year": 2023,
+        "month": 9,
+        "day": 28
+      },
+      "animalDescANI": "DADADADADADADADA",
+      "desparacitacionANI": {
+        "year": 2023,
+        "month": 9,
+        "day": 30
+      },
+      "proxDespANI": {
+        "year": 2023,
+        "month": 9,
+        "day": 30
+      },
+      "vacunaANI": true,
+      "hospedajeANI": "Adoptado",
+      "proxVacANI": {
+        "year": 2023,
+        "month": 11,
+        "day": 16
+      },
+      "observacionesANI": "Es muy DADADADADADADADADADADADADA",
+      "id": 2
+    },
+    {
+      "nombreANI": "Karakote",
+      "especieANI": "Gato",
+      "razaANI": "Perro",
+      "edadANI": "12 Años",
+      "generoANI": "Macho",
+      "esterilizadoANI": "Esterelizado",
+      "proxEstANI": {
+        "year": 2023,
+        "month": 10,
+        "day": 31
+      },
+      "animalDescANI": "Es ligeramente azul de la pata derecha",
+      "desparacitacionANI": {
+        "year": 2023,
+        "month": 10,
+        "day": 12
+      },
+      "proxDespANI": {
+        "year": 2023,
+        "month": 10,
+        "day": 4
+      },
+      "vacunaANI": true,
+      "hospedajeANI": "Hogar Kanguro",
+      "proxVacANI": {
+        "year": 2023,
+        "month": 10,
+        "day": 5
+      },
+      "observacionesANI": "Es un poco ciego por las cataratas que tiene en las patas traseras",
+      "id": 3
+    }
+  ],
+  "user": [
+    {
+      "id": "admin",
+      "name": "Lecxo",
+      "password": "admin",
+      "email": "admin@gmail.com",
+      "gender": "mujer",
+      "role": "admin",
+      "isactive": true
+    }
+  ],
+  "HistMed": []
+}

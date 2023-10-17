@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(0deg, rgba(0, 140, 163, 1) 18%, rgba(2, 82, 145, 1) 69%);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: .5rem;
+    background-color: #fff;
+    margin: 1.25rem 0 1.25rem 0;
+    box-shadow: 0 .25rem .5rem #e6edef;
+
+    .card-head {
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid #edf1f7;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .card-body {
+        padding: 1rem 1.5rem; 
+    }
+}
+
+  /* Estilos para agregar sombra */
+    textarea {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+
+    select {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+    /* input{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  } */
+
+  button{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .container{
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3);
+  }
+/* ////////////////////////////////////////// */
+
+th, td, thead{
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+#basic-addon2{
+    background-color: #becc07;
+  }
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

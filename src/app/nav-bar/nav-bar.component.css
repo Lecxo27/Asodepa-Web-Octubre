@@ -1,0 +1,18 @@
+*{
+    padding: 0%;
+    /* Color cian de las orejas #008ca3  */
+    /* Color Azul de las letras #025291 */
+    /* Color verde del logo del perrito  #becc07  */
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #becc07;
+  }
+
+  .navbar {
+    background-color: #025291;
+  }

@@ -1,0 +1,148 @@
+<input type="text" class="form-control" [(ngModel)]="searchText" (input)="filterData()" placeholder="Buscar">
+<br>
+<table class="table table-success table-striped table-hover shadow-sm">
+  <thead>
+    <tr>
+        <th class="d-table-cell">ID</th>
+        <th class="d-table-cell">Nombre</th>
+        <th class="d-none d-lg-table-cell">Apellido</th>
+        <th class="d-table-cell">Cedula</th>
+        <th class="d-none d-lg-table-cell">Direccion</th>
+        <th class="d-none d-lg-table-cell">Animales</th>
+        <th class="d-none d-lg-table-cell">Telefono</th>
+        <th class="d-table-cell">Modificar</th>
+        <th class="d-table-cell">Eliminar</th>
+        <th class="d-table-cell">Ver</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of filteredData">
+      <td class="d-table-cell">{{ item.id }}</td>
+      <td class="d-table-cell">{{ item.nombreADOP }}</td>
+      <td class="d-table-cell">{{ item.apellidoADOP }}</td>
+      <td class="d-none d-lg-table-cell ">{{ item.cedulaADOP }}</td>
+      <td class="d-none d-lg-table-cell">{{ item.direccionADOP }}</td>
+      <td class="d-none d-lg-table-cell">{{ item.AnimalesADOP }}</td>
+      <td class="d-none d-lg-table-cell">{{ item.TelefonoADOP}}</td>
+      <td class="d-table-cell"><!-- Modificar -->
+        <button class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#ModificarADOP"  type="button" (click)="openModal(item)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
+          <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z"/>
+        </svg></button>
+      </td>
+       <td class="d-table-cell"><!--Borrar -->
+        <button class="btn btn-danger" (click)="borrarItem(item)" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+          <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+        </svg></button>
+      </td>
+      <td class="d-table-cell"><!-- Ver -->
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#VerAdoptante"  type="button" (click)="openModal(item)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+          <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+          <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+        </svg></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Modal para Modificar -->
+  <div class="modal fade" id="ModificarADOP" [class.show]="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">Datos de: {{ selectedItem?.nombreADOP }}</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeModal()"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="adoptantelForm" (ngSubmit)="ModificarADOP(data)">
+            <label for="AnimalNombre">Nombre del Adoptante</label>
+            <div class="input-group mb-3 mt-3"><!-- Nombre -->
+               <input type="text" class="form-control" id="AnimalNombre" placeholder="" formControlName="nombreADOP" aria-label="Username" aria-describedby="basic-addon1" ngModel="{{ selectedItem?.nombreADOP }}"> 
+            </div>
+
+            <label for="AnimalEspecie">Apellido</label>
+            <div class="input-group mb-3"><!-- Especie -->
+              <input type="text" class="form-control" id="AnimalEspecie"  formControlName="apellidoADOP" aria-label="Username" aria-describedby="basic-addon1" ngModel="{{ selectedItem?.apellidoADOP }}">
+            </div>
+
+            <label for="AnimalRaza">Cedula</label>
+            <div class="input-group mb-3"><!-- Raza -->
+              <input type="text" class="form-control" id="AnimalRaza"  formControlName="cedulaADOP" aria-label="Username" aria-describedby="basic-addon1" ngModel="{{ selectedItem?.cedulaADOP }}">
+            </div>
+            
+            <label for="AnimalEdad">Direccion</label>
+            <div class="input-group mb-3"><!-- Edad -->
+              <input type="text" class="form-control" id="AnimalEdad"  formControlName="direccionADOP" aria-label="Recipient's username" aria-describedby="basic-addon2" ngModel="{{ selectedItem?.direccionADOP }}">
+            </div>
+
+            <label for="AnimalEdad">Referencia</label>
+            <div class="input-group mb-3"><!-- Edad -->
+              <input type="text" class="form-control" id="AnimalEdad"  formControlName="referenciaADOP" aria-label="Recipient's username" aria-describedby="basic-addon2" ngModel="{{ selectedItem?.referenciaADOP }}">
+            </div>
+
+            <label for="AnimalEdad">Telefono</label>
+            <div class="input-group mb-3"><!-- Edad -->
+              <input type="text" class="form-control" id="AnimalEdad"  formControlName="TelefonoADOP" aria-label="Recipient's username" aria-describedby="basic-addon2" ngModel="{{ selectedItem?.TelefonoADOP }}">
+            </div>
+
+            <label for="AnimalEdad">Celular</label>
+            <div class="input-group mb-3"><!-- Edad -->
+              <input type="text" class="form-control" id="AnimalEdad"  formControlName="celularADOP" aria-label="Recipient's username" aria-describedby="basic-addon2" ngModel="{{ selectedItem?.celularADOP }}">
+            </div>
+
+            <label for="AnimalEdad">Animales adoptados</label>
+            <div class="input-group mb-3"><!-- Edad -->
+              <input type="text" class="form-control" id="AnimalEdad"  formControlName="AnimalesADOP" aria-label="Recipient's username" aria-describedby="basic-addon2" ngModel="{{ selectedItem?.AnimalesADOP }}">
+            </div>
+
+            <button class="btn btn-success" type="submit"> GUARDAR</button>
+        </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="closeModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- Modal para Ver -->
+  <div class="modal fade" id="VerAdoptante" [class.show]="showModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">Datos de: {{ selectedItem?.nombreADOP }}</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeModal()"></button>
+        </div>
+        <div class="modal-body">
+          <label for="idANI"> <h3>Numero de registro</h3></label>
+            <p id="idANI">{{ selectedItem?.id }}</p>
+            <br>
+            <label for="especieANI"><h3>Apellido</h3></label>
+            <p  id="especieANI">{{ selectedItem?.apellidoADOP }}</p>
+            <br>
+            <label for="razaANI"><h3>Cedula</h3></label>
+            <p  id="razaANI">{{ selectedItem?.cedulaADOP }}</p>
+            <br>
+            <label for="edadANI"><h3>Direccion</h3></label>
+            <p  id="edadANI">{{ selectedItem?.direccionADOP }}</p>
+            <br>
+            <label for="edadANI"><h3>Referencia</h3></label>
+            <p  id="edadANI">{{ selectedItem?.referenciaADOP }}</p>
+            <br>
+            <label for="esterilizadoANI"><h3>ID de animales adoptados</h3></label>
+            <p  id="esterilizadoANI">{{ selectedItem?.AnimalesADOP }}</p>
+            <br>
+            <label for="proxEstANI"><h3>Numero de Contacto</h3></label>
+            <p  id="proxEstANI">{{ selectedItem?.TelefonoADOP }}</p>
+            <br>
+            <label for="animalDescANI"><h3>Numero de contacto alterno</h3></label>
+            <p  id="animalDescANI">{{ selectedItem?.celularADOP }}</p>
+            <br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="closeModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->

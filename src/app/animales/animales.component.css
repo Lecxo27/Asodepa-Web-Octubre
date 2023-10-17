@@ -1,0 +1,15 @@
+.container{
+    background-color: #f7f7f7;
+    box-shadow: inset;
+    
+}
+body{
+    
+    background: rgb(0,140,163);
+    background: linear-gradient(0deg, rgba(0,140,163,1) 18%, rgba(2,82,145,1) 69%);
+}
+
+button{
+    text-align: center;
+    font-size: large;
+}

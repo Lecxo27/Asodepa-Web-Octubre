@@ -1,0 +1,30 @@
+.mat-card {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .mat-card-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .example-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-full-width {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    margin-top: 20px;
+  }
+  
+  a {
+    margin-top: 10px;
+    display: inline-block;
+  }

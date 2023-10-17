@@ -1,0 +1,40 @@
+
+<mat-card>
+    <mat-card-header>
+      Registro de Rescatista
+    </mat-card-header>
+    <mat-card-content>
+      <form class="example-form" [formGroup]="registerform" (ngSubmit)="proceedregistation()">
+        <mat-form-field class="example-full-width">
+          <mat-label>Nombre de Usuario</mat-label>
+          <input matInput formControlName="id">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+          <mat-label>Nombre</mat-label>
+          <input matInput formControlName="name">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+          <mat-label>Contraseña</mat-label>
+          <input matInput type="password" formControlName="password">
+        </mat-form-field>
+        <br>
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" placeholder="Example@ejemplo.com" formControlName="email" value="ejemplo">
+          </mat-form-field>
+        <br>
+        <div>
+          <mat-radio-group formControlName="gender" aria-label="Genero">
+            <mat-radio-button value="hombre">Hombre</mat-radio-button>
+            <mat-radio-button value="mujer">Mujer</mat-radio-button>
+          </mat-radio-group> 
+        </div>
+        <div>
+          <button mat-raised-button color="primary">Registrar</button>
+          <a routerLink="/login" mat-raised-button color="accent">Volver a login</a>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
