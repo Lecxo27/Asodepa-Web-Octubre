@@ -6,7 +6,7 @@
         <th class="d-table-cell">ID</th>
         <th class="d-table-cell">Nombre</th>
         <th class="d-none d-lg-table-cell">Especie</th>
-        <th class="d-table-cell">Raza</th>
+        <th class="d-none d-lg-table-cell ">Raza</th>
         <th class="d-none d-lg-table-cell">Edad</th>
         <th class="d-none d-lg-table-cell">Genero</th>
         <th class="d-none d-lg-table-cell">Esterilizado</th>
@@ -19,7 +19,7 @@
     <tr *ngFor="let item of filteredData">
       <td class="d-table-cell">{{ item.id }}</td>
       <td class="d-table-cell">{{ item.nombreANI }}</td>
-      <td class="d-table-cell">{{ item.especieANI }}</td>
+      <td class="d-none d-lg-table-cell ">{{ item.especieANI }}</td>
       <td class="d-none d-lg-table-cell ">{{ item.razaANI }}</td>
       <td class="d-none d-lg-table-cell">{{ item.edadANI }}</td>
       <td class="d-none d-lg-table-cell">{{ item.generoANI }}</td>

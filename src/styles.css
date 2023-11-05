@@ -2,18 +2,18 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 body {
     position: relative;
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(0deg, rgba(0, 140, 163, 1) 18%, rgba(2, 82, 145, 1) 69%);
 }
-
+/* 
 .card {
     display: flex;
     flex-direction: column;
@@ -32,10 +32,10 @@ body {
     .card-body {
         padding: 1rem 1.5rem; 
     }
-}
+} */
 
   /* Estilos para agregar sombra */
-    textarea {
+    /* textarea {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
 
@@ -44,16 +44,11 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
 
-    /* input{
+    input{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   } */
 
-  button{
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  }
-  .container{
-    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3);
-  }
+
 /* ////////////////////////////////////////// */
 
 th, td, thead{
@@ -65,5 +60,5 @@ th, td, thead{
 #basic-addon2{
     background-color: #becc07;
   }
-
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* 
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */

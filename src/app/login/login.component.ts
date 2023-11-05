@@ -36,12 +36,6 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   proceedlogin(){
     if(this.loginform.valid){
-    //   this._service.proceedregister(this.loginform.value).subscribe(res=>{
-    //     this.toastr.success('Contactar al admin para otorgar acceso','Usuario registrado')
-    //     this._router.navigate(['login']);
-    //   });
-    // }else{
-    //   this.toastr.warning('Porfavor ingrese datos validos');
 
     this._service.getbycode(this.loginform.value.name).subscribe(res=>{
       this.userdata=res;

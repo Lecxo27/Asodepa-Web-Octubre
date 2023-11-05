@@ -31,7 +31,13 @@ export class AuthService {
     return sessionStorage.getItem('name')!=null;
   }
 
+// ################
   getUserRole(){
     return sessionStorage.getItem('role')!=null?sessionStorage.getItem('role')?.toString():'';
   }
+
+  getallrole(){
+    return this._http.get('http://localhost:3000/role');
+  }
+// #################
 }

@@ -17,18 +17,19 @@ body{
 #basic-addon2{
   background-color: #becc07;
 }
-
-/* Estilos para agregar sombra a los inputs */
-.input-group input.form-control {
+span{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos para agregar sombra al textarea */
-.input-group textarea.form-control {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+textarea {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos para agregar sombra a los select */
-  .input-group select.form-control {
+
+  select {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+  input{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }

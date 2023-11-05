@@ -14,16 +14,16 @@ import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   {path: 'inicio', component: InicioComponent, canActivate:[AuthGuard]},
-  {path: '', redirectTo: 'inicio', pathMatch: 'full'},
-  {path: '', component: InicioComponent},
-  {path: 'Adoptante', component: AdoptanteComponent},
-  {path: 'Animales', component: AnimalesComponent},
-  {path: 'HistMed', component: HistMedComponent},
+  {path: '', component: InicioComponent, canActivate:[AuthGuard]},
+  {path: 'Adoptante', component: AdoptanteComponent, canActivate:[AuthGuard]},
+  {path: 'ListaUsuario', component: UserlistingComponent, canActivate:[AuthGuard]},
+  {path: 'Animales', component: AnimalesComponent, canActivate:[AuthGuard]},
+  {path: 'HistMed', component: HistMedComponent, canActivate:[AuthGuard]},
   {path: 'login', component: LoginComponent },
-  {path: 'user', component: UserlistingComponent },
-  {path: 'registro', component: RegisterComponent },
-  {path: 'kanguro', component: KanguroComponent},
-  {path: 'admin', component: AdminComponent},
+  {path: 'user', component: UserlistingComponent, canActivate:[AuthGuard] },
+  {path: 'registro', component: RegisterComponent},
+  {path: 'kanguro', component: KanguroComponent, canActivate:[AuthGuard]},
+  {path: 'admin', component: AdminComponent, canActivate:[AuthGuard]},
   {path: 'navbar', component: NavBarComponent},
   {path: '**', redirectTo: 'login', pathMatch: 'full'}
 ];

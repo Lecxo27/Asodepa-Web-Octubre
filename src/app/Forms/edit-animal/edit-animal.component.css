@@ -1,0 +1,15 @@
+textarea {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+
+    select {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+    input{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  span{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }

@@ -13,3 +13,20 @@ button{
     text-align: center;
     font-size: large;
 }
+
+span{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+textarea {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+
+    select {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+    input{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }

@@ -20,20 +20,25 @@ import { LoginComponent } from './login/login.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AnimalesComponent } from './animales/animales.component';
 import { HistMedComponent } from './hist-med/hist-med.component';
+import { UserlistingComponent } from './admin/userlisting/userlisting.component';
 import { EditAdopComponent } from './Forms/edit-adop/edit-adop.component';
 import { EditAnimalComponent } from './Forms/edit-animal/edit-animal.component';
+import { EditUserComponent } from './Forms/edit-user/edit-user.component';
 
 // imports de Material UI
 import {MatButtonModule} from '@angular/material/button'; 
 import {MatDividerModule} from '@angular/material/divider'; 
 import {MatIconModule} from '@angular/material/icon';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatTableModule } from '@angular/material/table';
 import { TablaANComponent } from './animales/tabla-an/tabla-an.component';
 import { TablaAdComponent } from './adoptante/tabla-ad/tabla-ad.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { FooterComponent } from './footer/footer.component';
 import { RegisterComponent } from './register/register.component';
 import { MaterialModule } from './material.module';
 import { ToastrModule } from 'ngx-toastr';
+
 
 
 
@@ -54,6 +59,10 @@ import { ToastrModule } from 'ngx-toastr';
     TablaAdComponent,
     FooterComponent,
     RegisterComponent,
+    UserlistingComponent,
+    EditUserComponent
+    
+    
     
   ],
   imports: [
@@ -68,6 +77,8 @@ import { ToastrModule } from 'ngx-toastr';
     MatDatepickerModule, 
     HttpClientModule,
     MaterialModule,
+    MatTableModule,
+    MatPaginatorModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],

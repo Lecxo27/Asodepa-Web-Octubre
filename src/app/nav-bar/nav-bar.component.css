@@ -16,3 +16,11 @@
   .navbar {
     background-color: #025291;
   }
+
+  .btn-svg {
+    display: flex;
+    align-items: center;
+  }
+  .svg-icon {
+    margin-right: 5px;
+  }

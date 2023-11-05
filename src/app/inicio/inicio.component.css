@@ -20,3 +20,18 @@ body{
 th, td{
   text-align: center;
 }
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-title {
+  text-align: center;
+}
+.btn {
+  width: 100%;
+}

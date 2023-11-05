@@ -6,3 +6,20 @@ body{
     background: rgb(0,140,163);
     background: linear-gradient(0deg, rgba(0,140,163,1) 18%, rgba(2,82,145,1) 69%);
 }
+
+span{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+textarea {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+
+    select {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+    input{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
